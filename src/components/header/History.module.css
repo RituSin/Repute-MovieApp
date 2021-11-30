@@ -1,0 +1,189 @@
+
+.historyDropdown{
+    position: relative;
+    display: block;
+    margin: 0 1em 0 0;
+    outline: none;
+    
+}
+
+.historyDropdown label{
+    display: block;
+    font-weight: 500;
+    cursor: pointer;
+
+    color: whitesmoke;
+    font-size: 1.1em;
+    line-height: 4.25em;
+    min-width: 5em;
+}
+
+
+
+.historyDropdown .btn span{
+    float: right;
+    line-height: 4.5em;
+}
+
+
+.historyDropdown ul {
+    background-color: #1b1b1b;
+    position: absolute;
+    list-style: none;
+
+    margin-top: 0.5em;
+    padding-left: 0;
+    width: auto;
+    min-width: 125px;
+    border-radius: 6px;
+    display: none;
+    transition: all 500ms ease-in-out;
+    margin-right: 10px;
+    color: white;
+}
+
+.historyDropdown ul li{
+    list-style-type: none;
+    line-height: 28px;
+    padding: 6px 0.5em 6px 0.8em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: normal;
+    
+    -webkit-transition:  font-size 500ms;
+       -moz-transition:  font-size 500ms;
+         -o-transition: font-size 500ms;
+            transition:  font-size 500ms;
+    transition: all 500ms ease-in-out;
+}
+
+.historyDropdown ul li:last-child{
+    border-bottom: none;    
+}
+
+.historyDropdown .menu::before{
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 10px;
+    background-color: #1b1b1b;
+    right:10px;
+    top:-3px;
+    left:10px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.historyDropdown .menu li span{
+    float: right;
+    cursor: pointer;
+    right: 5px;
+    color: red;
+    opacity: 0;
+    font-size: 1.4em;
+    line-height: 1.7em;
+
+
+}
+
+.historyDropdown .menu li:hover span{
+    opacity: 0.6;
+}
+
+.historyDropdown .menu li:last-child{
+    opacity: 0.5;
+    text-align: center;
+}
+
+
+.historyDropdown .menu li:last-child:hover{
+    opacity: 0.8;
+}
+
+.historyDropdown .menu li:hover{
+    font-size: 0.95em;
+}
+
+.historyDropdown .menu li span:hover{
+    font-size: 1.6em;
+    line-height: 1.45em;
+}
+
+
+@media screen and (max-width: 960px) {
+    .historyDropdown label{
+        font-size: 1em;
+        line-height: 2.8em;
+    }
+    .historyDropdown .btn span{
+        line-height: 3.1em;
+    }
+
+    .historyDropdown ul {
+        margin-top: 0.3em;
+        min-width: 105px;
+    }
+   
+}
+
+
+@media screen and (max-width: 620px) {
+    .historyDropdown label{
+        font-size: 0.8em;
+        line-height: 2.8em;
+        min-width: 4.6em;
+    }
+    .historyDropdown .btn span{
+        line-height: 3.25em;
+    }
+
+    .historyDropdown ul {
+        margin-top: 0.3em;
+        min-width: 100px;
+    }
+
+    .historyDropdown ul li{
+        line-height: 24px;
+        font-size: 0.8em;   
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .historyDropdown label{
+        font-size: 0.66em;
+        line-height: 3.2em;
+        min-width: 4.5em;
+    }
+    .historyDropdown .btn span{
+        line-height: 3.5em;
+    }
+
+    .historyDropdown ul {
+        min-width: 80px;
+    }
+
+    .historyDropdown ul li{
+        line-height: 20px;
+        font-size: 0.6em;   
+    }
+}
+
+@media screen and (max-width:322px) {
+    .historyDropdown label{
+        font-size: 0.5em;
+        line-height: 3.8em;
+    }
+    .historyDropdown .btn span{
+        line-height: 4.2em;
+    }
+
+    .historyDropdown ul {
+        min-width: 60px;
+    }
+
+    .historyDropdown ul li{
+        line-height: 12px;
+        font-size: 0.4em;   
+    }
+}

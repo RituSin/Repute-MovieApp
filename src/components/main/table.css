@@ -1,0 +1,217 @@
+
+ .responsive-table{
+   margin-top: 0.4em;
+   padding: 0 1em;
+ }
+
+ .table-container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 3.2em auto 0 auto ;
+  
+  height: auto;
+  min-height: 200px;
+  max-width: 99%;
+  width: auto;
+  padding: 0 1em;
+  padding-bottom: 1em;
+  overflow-x: hidden;
+  overflow-y: auto;
+ }
+
+ .table-container::-webkit-scrollbar {
+  display: none;
+}
+
+.table-container {
+  -mtables-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+  
+.responsive-table li {
+  border-radius: 3px;
+  padding: 1em 1.8em;
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.responsive-table .table-container li {
+  border-radius: 3px;
+  padding: 1em 1.8em;
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.responsive-table .table-header {
+  background-color: inherit;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+  
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  z-index: 1;  
+  padding: 0.8em 1.8em;
+}
+
+.responsive-table .table-container .table-row {
+  background-color:transparent;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;  
+  font-weight: 500;
+}
+
+.responsive-table .table-container .table-row:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 9px 10px rgba(0, 0, 0, 0.1);
+}
+.responsive-table .col-1 {
+  flex-basis: 10%;
+}
+.responsive-table .col-2 {
+  flex-basis: 45%;
+}
+.responsive-table .col-3 {
+  flex-basis: 25%;
+}
+.responsive-table .col-4 {
+  flex-basis: 25%;
+}
+@media all and (max-width: 167px) {
+  .responsive-table .table-header {
+    display: none;
+  }
+  .responsive-table li {
+    display: block;
+  }
+  .responsive-table .col {
+    flex-basis: 100%;
+  }
+  .responsive-table .col {
+    display: flex;
+    padding: 10px 0;
+  }
+  .responsive-table .col:before {
+    color: #6c7a89;
+    padding-right: 10px;
+    content: attr(data-label);
+    flex-basis: 50%;
+    text-align: right;
+  }
+}
+
+
+/* ######################################### tooltip ############################################# */
+
+.tooltip .tooltiptext {
+  width: 90%;
+  min-width: 100px;
+  background-color: #1b1b1b;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin: 4px;
+
+  font-weight: lighter;
+  font-size: 12px;
+  letter-spacing: 1;
+  line-height: 1.4;
+  opacity: 0.8;
+
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 10;
+  text-align: justify;
+  top:58px;
+
+  border-radius: 6px;
+  display: none;
+  transition: all 500ms ease-in-out;
+}
+
+.tooltip .tooltiptext::before{
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 10px;
+  background-color: #1b1b1b;
+  right:10px;
+  top:-3px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.tooltip:hover .tooltiptext {
+  /* visibility: visible; */
+  display: block;
+}
+
+
+
+@media screen and (max-width: 960px) {
+  .responsive-table .table-header {
+    font-size: 10px;
+    letter-spacing: 0.01em;
+    padding: 0.7em 1.8em;
+  }
+  
+  .responsive-table .table-container li {
+    border-radius: 3px;
+    padding: 0.8em 1.8em;
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .table-container{
+    margin: 2.5em auto 0 auto ;
+ }  
+}
+
+@media screen and (max-width: 770px) {
+  .tooltip .tooltiptext {
+    top:35px;
+  } 
+}
+
+@media screen and (max-width: 660px) {
+  .responsive-table .table-header {
+    font-size: 7px;
+    padding: 0.6em 1.8em;
+  }
+  
+  .responsive-table .table-container li {
+    margin-bottom: 6px;
+    font-size: 8px;
+  }
+
+  .table-container{
+    margin: 1.8em auto 0 auto ;
+  } 
+  .tooltip .tooltiptext {
+    width: 80%;
+    padding: 8px 12px;
+    margin: 2px;
+    font-weight: lighter;
+    font-size: 9px;
+    line-height: 1.25;
+    top:28px;
+  } 
+}
+
+@media screen and (max-width: 360px) {
+    
+  .table-container{
+    margin: 2em auto 0 auto ;
+  } 
+}

@@ -1,0 +1,42 @@
+
+.LoadingContainer
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    
+    perspective: 200px;
+}
+
+.loader{
+    width: 7em;
+    height: 7em;
+    border-radius: 12px;
+    background-color: #00dbde;
+    animation: loading 2s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    filter: blur(0.5px);
+
+}
+.loader h1{
+    font-size: 4em;
+    font-weight: 900;
+    font-family: "Papyrus";
+    color: whitesmoke;
+}
+@keyframes loading {
+    0%{
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    50%{
+        transform: rotateX(0deg) rotateY(180deg);
+    }
+    100%{
+        transform: rotateX(180deg) rotateY(180deg);
+    }
+}

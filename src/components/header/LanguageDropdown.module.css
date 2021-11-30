@@ -1,0 +1,167 @@
+
+
+.LangDropdown{
+    position: relative;
+    display: block;
+    background: transparent;
+    color: whitesmoke;
+    width:auto;
+    margin: 10px 0;
+    line-height: 28px;
+    height: auto;
+    min-width: 150px;
+    padding: 6px 0.5em 6px 0.8em;
+    box-sizing: border-box;
+    border-bottom: 1px solid;
+    text-align: left;
+    z-index: 1;
+    margin-right: 5px;
+    outline: none;
+}
+
+.LangDropdown label{
+    display: block;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.LangDropdown .btn span{
+    float: right;
+    line-height: 32px;
+}
+
+.LangDropdown ul {
+    background-color: #1b1b1b;
+    position: absolute;
+    list-style: none;
+
+    margin-top: 1.5em;
+    padding-left: 0;
+    left:0;
+    width: 100%;
+    border-radius: 6px;
+    display: none;
+    transition: all 500ms ease-in-out;
+}
+
+.LangDropdown .menu::before{
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 10px;
+    background-color: #1b1b1b;
+    right:10px;
+    top:-3px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.LangDropdown ul li{
+    list-style-type: none;
+    line-height: 28px;
+    padding: 6px 0.5em 6px 0.8em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: normal;
+    -webkit-transition:  font-size 400ms;
+       -moz-transition:  font-size 400ms;
+         -o-transition: font-size 400ms;
+            transition:  font-size 400ms;
+    transition: all 400ms ease-in-out;
+}
+
+.LangDropdown ul li:last-child{
+    border-bottom: none;
+    opacity: 0.5;
+}
+
+
+.LangDropdown ul li:hover{
+    font-size: 0.95em;
+}
+
+
+/* ################## */
+
+@media screen and (max-width: 960px) {
+    .LangDropdown{
+        min-width: 95px; 
+        line-height: 18px;
+        padding: 4px 0.5em 4px 0.8em;
+    }
+
+    .LangDropdown label{
+        font-size: 0.8em;
+    }
+    
+    .LangDropdown .btn span{
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .LangDropdown{
+        min-width: 82px; 
+        line-height: 12px;
+        padding: 4px 0.4em;
+    }
+
+    .LangDropdown label{
+        font-size: 0.7em;
+    }
+    
+    .LangDropdown .btn span{
+        line-height: 16px;
+    }
+
+    .LangDropdown ul li{
+        line-height: 20px;
+        padding: 5px 0.6em;       
+        font-size: 0.7em;        
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .LangDropdown{
+        min-width: 60px; 
+        line-height: 8px;
+        padding: 2px 0.25em;
+    }
+
+    .LangDropdown label{
+        font-size: 0.55em;
+    }
+    
+    .LangDropdown .btn span{
+        line-height: 12px;
+    }
+
+    .LangDropdown ul li{
+        line-height: 16px;
+        padding: 4px 0.4em 4px 0.8em;       
+        font-size: 0.5em;        
+    }
+}
+
+@media screen and (max-width:322px) {
+    .LangDropdown{
+        min-width: 45px; 
+        line-height: 8px;
+        padding: 1px 0.25em;
+    }
+
+    .LangDropdown label{
+        font-size: 0.4em;
+    }
+    
+    .LangDropdown .btn span{
+        line-height: 10px;
+    }
+
+    .LangDropdown ul li{
+        line-height: 12px;
+        padding: 4px 0.4em 4px 0.8em;       
+        font-size: 0.4em;        
+    }
+}

@@ -1,0 +1,56 @@
+
+.movies-conatiner{
+    height: 76%;
+    min-height: 200px;
+    min-width: 30%;
+    max-width: 80%;
+    width: auto;
+    background-color: rgba(255,255,255,0.06);
+    backdrop-filter: blur(60px);
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 2em auto 0 auto ;
+    
+    border-radius: 8px;
+    box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+    font-family: 'Poppins',sans-serif;
+    padding-bottom: 0.2em;
+}
+
+@media screen and (max-width: 1020px) {
+  .movies-conatiner{
+    height: 72%;
+    min-height: 200px;
+    min-width: 30%;
+    max-width: 90%;
+    width: auto;
+    background-color: rgba(255,255,255,0.06);
+    backdrop-filter: blur(60px);
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 2em auto 0 auto ;
+    
+    border-radius: 8px;
+    box-shadow: 20px 20px 22px rgba(0,0,0,0.2);
+    font-family: 'Poppins',sans-serif;
+    padding-bottom: 0.2em;
+}
+}
+
+@media screen and (max-height: 600px) {
+  .movies-conatiner{
+    height: 68%;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .movies-conatiner{
+    height: 62%;
+  }
+}
